@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yummy is a food recipes website">
+    <title>Yummy</title>
+    <link rel="website icon" href="imgs/logo.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div
+        class="page-loader position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <div class="side-navigation min-vh-100 position-fixed d-flex top-0">
+        <div class="nav-item d-flex flex-column justify-content-between min-vh-100 p-4">
+            <div class="menu-links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li onclick="displaySearchInputs(); hideNavMenu()" class="py-2 position-relative cursor-pointer">
+                        Search</li>
+                    <li onclick="fetchCategories(); hideNavMenu()" class="py-2 position-relative cursor-pointer">
+                        Categories</li>
+                    <li onclick="fetchAreas(); hideNavMenu()" class="py-2 position-relative cursor-pointer">Area</li>
+                    <li onclick="fetchIngredients(); hideNavMenu()" class="py-2 position-relative cursor-pointer">
+                        Ingredients</li>
+                    <li onclick="displayContacts(); hideNavMenu()" class="py-2 position-relative cursor-pointer">Contact
+                        Us
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer-text">
+                    <p>Copyright © 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="site-logo" src="imgs/logo.png" alt="Yummy Logo">
+            <i class="fa-solid menu-toggle-icon fa-align-justify fa-2x"></i>
+            <div class="additional-icons">
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container w-75" id="searchSection"></div>
+
+    <div class="min-vh-100 position-relative">
+        <div class="content-loader top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+            <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+
+        <div class="container">
+            <div class="row py-5 g-4" id="mealDisplayArea"></div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
